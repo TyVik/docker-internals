@@ -1,0 +1,5 @@
+FROM python:3.7-slim-buster
+# RUN apt update && apt install gcc musl-dev
+RUN pip install aiohttp==3.6.2
+COPY get_http.py .
+ENTRYPOINT ["python3", "get_http.py"]
